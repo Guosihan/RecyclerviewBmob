@@ -11,7 +11,25 @@ public class Person extends BmobObject{
     private String name;
     private String address;
     private int age;
+    private String MobilePhoneNumber;
 
+    public String getMobilePhoneNumber() {
+        return MobilePhoneNumber;
+    }
+
+    public void setMobilePhoneNumber(String mobilePhoneNumber) {
+        MobilePhoneNumber = mobilePhoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    private String password;
     public String getName() {
         return name;
     }

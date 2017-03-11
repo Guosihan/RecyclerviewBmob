@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Person> mArrayList;
     private RecyclerView mRecycleView;
     private MyAdapter mAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
         //StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL);
         mRecycleView.setLayoutManager(new LinearLayoutManager(MainActivity.this));;
 
-
+        findViewById(R.id.btn_register).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
         findViewById(R.id.btn_add).setOnClickListener(new View.OnClickListener() {
             @Override
